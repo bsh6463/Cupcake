@@ -26,6 +26,10 @@ class OrderViewModel: ViewModel() {
         NumberFormat.getCurrencyInstance().format(it)
     }
 
+    fun priceGet(): Double? {
+        return _price.value
+    }
+
     val dateOptions = getPickupOptions()
 
 

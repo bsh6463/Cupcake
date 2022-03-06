@@ -24,8 +24,7 @@ class ViewModelTests {
         viewModel.price.observeForever {}
         viewModel.quantity.observeForever{}
         viewModel.setQuantity(12)
-        val temp = viewModel.price.value
-    //    assertEquals("₩27", temp)
+        assertEquals(27.00, viewModel.priceGet())
     }
 
 }
