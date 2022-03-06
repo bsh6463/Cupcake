@@ -51,7 +51,7 @@
                     style="@style/Widget.Cupcake.TextView.OrderSummary"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@{viewModel.quantity.toString()}"
+                    android:text="@string/quantity"
                     android:textAllCaps="true"
                     android:textStyle="normal" />
 
@@ -61,7 +61,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/order_summary_margin"
-                    tools:text="6 cupcakes" />
+                    tools:text="@{viewModel.quantity.toString()}" />
 
                 <View
                     android:id="@+id/divider1"
@@ -136,6 +136,15 @@
                 android:layout_marginTop="@dimen/side_margin"
                 android:text="@string/send"
                 android:onClick="@{() -> summaryFragment.sendOrder()}"/>
+
+            <Button
+                android:id="@+id/cancel_button"
+                style="?attr/materialButtonOutlinedStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_between_elements"
+                android:text="@string/cancel"
+                android:onClick="@{() -> summaryFragment.cancelOrder()}"/>
 
         </LinearLayout>
     </ScrollView>
